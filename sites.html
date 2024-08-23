@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Links</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border: 2px solid #ff7e5f;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #ffebcd;
+        }
+
+        .back-button img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .link-box {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .link-box:hover {
+            transform: scale(1.05);
+            background-color: #ffebcd;
+        }
+
+        .link-logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .link-text {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .link-text:hover {
+            color: #ff7e5f;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .link-box {
+            animation: slideIn 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="back-button" onclick="goBack()">
+        <img src="https://img.icons8.com/ios-filled/50/000000/left.png" alt="Back">
+    </div>
+
+    <div class="container">
+        <div class="link-box">
+            <img src="https://img.icons8.com/fluency/48/school.png" alt="School Management" class="link-logo">
+            <a href="school.html" class="link-text">School Management</a>
+        </div>
+
+        <div class="link-box">
+            <img src="https://img.icons8.com/fluency/48/money-bag.png" alt="Making Money" class="link-logo">
+            <a href="https://www.makemoney.com" class="link-text">Making Money</a>
+        </div>
+
+        <div class="link-box">
+            <img src="https://img.icons8.com/fluency/48/studying.png" alt="Learning" class="link-logo">
+            <a href="https://www.learnwithus.com" class="link-text">Learning</a>
+        </div>
+
+        <div class="link-box">
+            <img src="https://img.icons8.com/fluency/48/web-development.png" alt="Web Development" class="link-logo">
+            <a href="https://www.webdevelopment.com" class="link-text">Web Development</a>
+        </div>
+
+        <div class="link-box">
+            <img src="https://img.icons8.com/fluency/48/transaction.png" alt="Trading" class="link-logo">
+            <a href="https://www.tradingplatform.com" class="link-text">Trading (Buy & Sell)</a>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = 'welcome.html';
+        }
+    </script>
+</body>
+</html>

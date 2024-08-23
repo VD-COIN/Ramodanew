@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAMODA Software Technology</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #282c34, #4b5563);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Sidebar */
+        #sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background: #1c1c1c;
+            transition: 0.3s;
+            padding-top: 60px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #sidebar.active {
+            left: 0;
+        }
+
+        #sidebar a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #ccc;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #sidebar a:hover {
+            color: #ffdc82;
+            background: #333;
+        }
+
+        #sidebar .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #openSidebar {
+            font-size: 30px;
+            cursor: pointer;
+            color: #ffdc82;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
+
+        .main-content.active {
+            margin-left: 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ffdc82;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #e2e2e2;
+        }
+
+        .buttons-container {
+            margin-top: 30px;
+        }
+
+        .buttons-container button {
+            background-color: #ffdc82;
+            border: none;
+            padding: 15px 30px;
+            margin-right: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons-container button:hover {
+            background-color: #e6c96a;
+        }
+
+        /* Social Media Links */
+        .social-media {
+            margin-top: 50px;
+        }
+
+        .social-media a {
+            color: #ffdc82;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 24px;
+        }
+
+        .social-media a:hover {
+            color: #e6c96a;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            .main-content {
+                margin-left: 0;
+            }
+
+            #sidebar {
+                width: 200px;
+                left: -200px;
+            }
+
+            #sidebar.active {
+                width: 200px;
+                left: 0;
+            }
+
+            #openSidebar {
+                font-size: 24px;
+                left: 15px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="openSidebar" onclick="toggleSidebar()">&#9776; Menu</div>
+
+    <div id="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+        <a href="about.html">About</a>
+        <a href="with.html">With</a>
+        <a href="comment.html">Comment</a>
+        <a href="support.html">Support</a>
+        <a href="faq html">FAQ</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <h1>Welcome to RAMODA Software Technology</h1>
+        <p>
+            RAMODA Software Technology is a leading innovator in the tech industry, committed to delivering 
+            cutting-edge software solutions that revolutionize the way businesses operate. Our team of 
+            experienced developers, designers, and strategists work together to create seamless user 
+            experiences and robust applications that cater to the needs of our diverse clientele.
+        </p>
+          <div class="buttons-container">
+            <button onclick="window.location.href='sites.html'">OUR SERVICES</button></div>
+        <p>
+            We specialize in developing customized software, mobile applications, and enterprise solutions that 
+            drive efficiency and growth. Our approach is client-centric, focusing on understanding the unique 
+            challenges faced by businesses and providing tailored solutions that deliver measurable results.
+        </p>
+       <div class="buttons-container"> <button onclick="window.location.href='Dowload.html'">DOWNLOAD APP</button></div>
+    
+            
+            
+        <div class="social-media">
+            <a href="https://www.youtube.com/channel/your-channel-id?sub_confirmation=1" target="_blank">YouTube</a>
+            <a href="https://www.facebook.com/your-page" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/your-profile" target="_blank">Instagram</a>
+            <a href="https://www.twitter.com/your-profile" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/company/your-company" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+            document.getElementById("mainContent").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

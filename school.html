@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education & Work Resources</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(to bottom right, #00838f, #00acc1);
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border: 2px solid #00838f;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #b2ebf2;
+        }
+
+        .back-button img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .link-box {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .link-box:hover {
+            transform: scale(1.05);
+            background-color: #b2ebf2;
+        }
+
+        .link-logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .link-text {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .link-text:hover {
+            color: #00838f;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .link-box {
+            animation: slideIn 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="back-button" onclick="goBack()">
+        <img src="https://img.icons8.com/ios-filled/50/000000/left.png" alt="Back">
+    </div>
+
+    <div class="container">
+        <div class="link-box">
+            <img src="https://img.icons8.com/fluency/48/registration.png" alt="Registration" class="link-logo">
+            <a href="https://www.registration.com" class="link-text">For Registration</a>
+        </div>
+
+        <div class="link-box">
+            <img src="https://img.icons8.com/fluency/48/exam.png" alt="Online Exam" class="link-logo">
+            <a href="https://www.onlineexam.com" class="link-text">For Online Exam</a>
+        </div>
+
+        <div class="link-box">
+            <img src="https://img.icons8.com/fluency/48/result.png" alt="Result Viewer" class="link-logo">
+            <a href="https://www.resultviewer.com" class="link-text">For Result Viewer</a>
+        </div>
+
+        <div class="link-box">
+            <img src="https://img.icons8.com/fluency/48/teacher.png" alt="Teachers Assistant" class="link-logo">
+            <a href="https://www.teachersassistant.com" class="link-text">For Teachers Assistant</a>
+        </div>
+
+        <div class="link-box">
+            <img src="https://img.icons8.com/fluency/48/web-design.png" alt="School Website Development" class="link-logo">
+            <a href="https://www.schoolwebdev.com" class="link-text">For School Website Development</a>
+        </div>
+
+        <div class="link-box">
+            <img src="https://img.icons8.com/fluency/48/handshake.png" alt="Work with RAMODA" class="link-logo">
+            <a href="https://www.workwithramoda.com" class="link-text">For Work with RAMODA</a>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = 'sites.html';
+        }
+    </script>
+</body>
+</html>
